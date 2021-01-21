@@ -140,3 +140,10 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
   "AllowedHosts": "*"
 }
 ```
+
+### Links
+
+ - [Logging in ASP.NET Core 5 using Serilog](https://www.ezzylearning.net/tutorial/logging-in-asp-net-core-5-using-serilog)
+ - [Serilog configuration sample](https://github.com/serilog/serilog-docker/blob/master/web-sample/src/Program.cs)
+ - [Serilog getting started](https://github.com/serilog/serilog/wiki/Getting-Started)
+ - [Serilog aspnetcore](https://github.com/serilog/serilog-aspnetcore)
