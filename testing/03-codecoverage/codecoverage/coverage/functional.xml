@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.8332999999999999" branch-rate="1" version="1.9" timestamp="1611229314" lines-covered="40" lines-valid="48" branches-covered="2" branches-valid="2">
+<coverage line-rate="0.8332999999999999" branch-rate="1" version="1.9" timestamp="1611237501" lines-covered="40" lines-valid="48" branches-covered="2" branches-valid="2">
   <sources>
     <source>C:\Github\aspnetcore-recipes\testing\03-codecoverage\src\</source>
   </sources>

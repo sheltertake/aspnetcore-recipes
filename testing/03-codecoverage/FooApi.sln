@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FooApi", "src\FooApi.csproj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{EEC038CD-AEBD-453A-8995-BD23DE3BB5CE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FooApIntegrationTests", "tests\FooApIntegrationTests.csproj", "{BABADD68-F5A3-495D-9F9A-B83F89EC6704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FooApiFunctionalTests", "tests\FooApiFunctionalTests.csproj", "{BABADD68-F5A3-495D-9F9A-B83F89EC6704}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

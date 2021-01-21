@@ -2,8 +2,8 @@
 
 ## Recipe 03 - Code Coverage (from 01)
 
- - copy 01-integrationtests and paste renaming 03-codecoverage 
- - install nuget package in FooApIntegrationTests project
+ - copy 01-functionaltests and paste renaming 03-codecoverage 
+ - install nuget package in FooApFunctionalTests project
    - coverlet.msbuild
 
  - run tests using cli options
@@ -17,26 +17,26 @@
    - /p:CoverletOutput -> path to write cobertura xml
 
 ```cmd
-C:\Github\aspnetcore-recipes\testing\03-codecoverage>dotnet test .\tests\FooApIntegrationTests.csproj --configuration Release --results-directory=.\ --filter=TestCategory!=local --logger "trx;LogFileName=.\codecoverage\results\integration.trx" /p:CollectCoverage=true  /p:CoverletOutputFormat=Cobertura /p:CoverletOutput=.\..\codecoverage\coverage\integration.xml 
+C:\Github\aspnetcore-recipes\testing\03-codecoverage>dotnet test .\tests\FooApiFunctionalTests.csproj --configuration Release --results-directory=.\ --filter=TestCategory!=local --logger "trx;LogFileName=.\codecoverage\results\functional.trx" /p:CollectCoverage=true  /p:CoverletOutputFormat=Cobertura /p:CoverletOutput=.\..\codecoverage\coverage\functional.xml /p:Include="[FooApi]*"
 ```
  - advanced options I use to add
-   - /p:Include="[FooApi*]*" /p:exclude="[FooApi]FooApi.NameSpaceToExclude.*"
+   -  /p:exclude="[FooApi]FooApi.NameSpaceToExclude.*"
 
 
 ```cmd
-Test run for C:\Github\aspnetcore-recipes\testing\03-codecoverage\tests\bin\Release\net5.0\FooApIntegrationTests.dll (.NETCoreApp,Version=v5.0)
+Test run for C:\Github\aspnetcore-recipes\testing\03-codecoverage\tests\bin\Release\net5.0\FooApiFunctionalTests.dll (.NETCoreApp,Version=v5.0)
 Microsoft (R) Test Execution Command Line Tool Version 16.8.3
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
 Starting test execution, please wait...
 A total of 1 test files matched the specified pattern.
-WARNING: Overwriting results file: C:\Github\aspnetcore-recipes\testing\03-codecoverage\.\codecoverage\results\integration.trx
-Results File: C:\Github\aspnetcore-recipes\testing\03-codecoverage\.\codecoverage\results\integration.trx
+WARNING: Overwriting results file: C:\Github\aspnetcore-recipes\testing\03-codecoverage\.\codecoverage\results\functional.trx
+Results File: C:\Github\aspnetcore-recipes\testing\03-codecoverage\.\codecoverage\results\functional.trx
 
-Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: 694 ms - FooApIntegrationTests.dll (net5.0)
+Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: 657 ms - FooApiFunctionalTests.dll (net5.0)
 
 Calculating coverage result...
-  Generating report '.\..\codecoverage\coverage\integration.xml'
+  Generating report '.\..\codecoverage\coverage\functional.xml'
 
 +--------+--------+--------+--------+
 | Module | Line   | Branch | Method |
