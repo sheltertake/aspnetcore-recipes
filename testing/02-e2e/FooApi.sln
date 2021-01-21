@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FooApi", "src\FooApi.csproj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{EEC038CD-AEBD-453A-8995-BD23DE3BB5CE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FooApIntegrationTests", "tests\FooApIntegrationTests.csproj", "{BABADD68-F5A3-495D-9F9A-B83F89EC6704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FooApiE2eTests", "tests\FooApiE2eTests.csproj", "{2DD49502-B098-4F3E-A037-367C89FE735C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,16 +19,16 @@ Global
 		{F7C9C4BF-4DC9-4E94-8E63-F1F943879F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7C9C4BF-4DC9-4E94-8E63-F1F943879F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7C9C4BF-4DC9-4E94-8E63-F1F943879F61}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BABADD68-F5A3-495D-9F9A-B83F89EC6704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BABADD68-F5A3-495D-9F9A-B83F89EC6704}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BABADD68-F5A3-495D-9F9A-B83F89EC6704}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BABADD68-F5A3-495D-9F9A-B83F89EC6704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DD49502-B098-4F3E-A037-367C89FE735C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD49502-B098-4F3E-A037-367C89FE735C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD49502-B098-4F3E-A037-367C89FE735C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD49502-B098-4F3E-A037-367C89FE735C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{BABADD68-F5A3-495D-9F9A-B83F89EC6704} = {EEC038CD-AEBD-453A-8995-BD23DE3BB5CE}
+		{2DD49502-B098-4F3E-A037-367C89FE735C} = {EEC038CD-AEBD-453A-8995-BD23DE3BB5CE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C4D6236-6253-40E6-9AD3-8E26F28BB89D}
