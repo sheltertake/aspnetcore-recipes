@@ -4,7 +4,7 @@
 
 ## Testing
 
-### 01 - Integration tests
+### 01 - Functional tests
 
  - base recipe
  - SqlServer + UseInMemoryDatabase

@@ -1,10 +1,10 @@
 # Testing
 
-## Recipe 01 - Integration tests
+## Recipe 01 - Functional tests
 
 ```cmd
 dotnet new webapi -n FooApi -o src/
-dotnet new nunit -n FooApiIntegrationTests -o tests/
+dotnet new nunit -n FooApiFunctionalTests -o tests/
 ```
 
  - install nuget packages
@@ -29,7 +29,7 @@ using System.Linq;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 
-namespace FooApiTests
+namespace FooApiFunctionalTests
 {
     [TestFixture]
     public class WeatherForecastControllerTest
@@ -69,13 +69,13 @@ namespace FooApiTests
 
 
 ```cmd
-PS C:\Github\aspnetcore-recipes\testing\01-integrationtests> dotnet test
+PS C:\Github\aspnetcore-recipes\testing\01-functionaltests\src> dotnet test
   Determining projects to restore...
-  Restored C:\Github\aspnetcore-recipes\testing\01-integrationtests\src\FooApi.csproj (in 309 ms).
-  Restored C:\Github\aspnetcore-recipes\testing\01-integrationtests\tests\FooApiTests.csproj (in 795 ms).
-  FooApi -> C:\Github\aspnetcore-recipes\testing\01-integrationtests\src\bin\Debug\net5.0\FooApi.dll
-  FooApiTests -> C:\Github\aspnetcore-recipes\testing\01-integrationtests\tests\bin\Debug\net5.0\FooApiTests.dll
-Test run for C:\Github\aspnetcore-recipes\testing\01-integrationtests\tests\bin\Debug\net5.0\FooApiTests.dll (.NETCoreApp,Version=v5.0)
+  Restored C:\Github\aspnetcore-recipes\testing\01-functionaltests\src\FooApi.csproj (in 309 ms).
+  Restored C:\Github\aspnetcore-recipes\testing\01-functionaltests\tests\FooApiTests.csproj (in 795 ms).
+  FooApi -> C:\Github\aspnetcore-recipes\testing\01-functionaltests\src\bin\Debug\net5.0\FooApi.dll
+  FooApiTests -> C:\Github\aspnetcore-recipes\testing\01-functionaltests\tests\bin\Debug\net5.0\FooApiTests.dll
+Test run for C:\Github\aspnetcore-recipes\testing\01-functionaltests\tests\bin\Debug\net5.0\FooApiTests.dll (.NETCoreApp,Version=v5.0)
 Microsoft (R) Test Execution Command Line Tool Version 16.8.3
 Copyright (c) Microsoft Corporation.  All rights reserved.
 

@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 
-namespace FooApiIntegrationTests
+namespace FooApFunctionalTests
 {
     [TestFixture]
     public class WeatherForecastControllerTest
