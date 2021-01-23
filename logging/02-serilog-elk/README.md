@@ -44,6 +44,9 @@ password: changeme
 <PackageReference Include="Serilog.Sinks.Http" Version="7.2.0" />
 ```
 
+### Test
+
+
 ### Links
 
  - [docker elk](https://github.com/deviantony/docker-elk#how-to-disable-paid-features)
