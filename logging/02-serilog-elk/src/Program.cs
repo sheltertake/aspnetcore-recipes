@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using Serilog.Events;
 
 namespace FooApi
 {
@@ -13,14 +12,11 @@ namespace FooApi
         public static void Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
-                //.ReadFrom.Configuration(Configuration)
-                .MinimumLevel.Is(LogEventLevel.Debug)
-                .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+                .ReadFrom.Configuration(Configuration)
                 .WriteTo.DurableHttpUsingFileSizeRolledBuffers(
-                     requestUri: "http://localhost:5000",
-                     batchFormatter: new Serilog.Sinks.Http.BatchFormatters.ArrayBatchFormatter(),
-                     bufferBaseFileName: $"C:\\Temp\\elk-serilog\\Buffer-{AppDomain.CurrentDomain.FriendlyName}"
-                 )
+                      requestUri: Configuration.GetValue<string>("AppSettings:logstashurl"),
+                      bufferBaseFileName: Configuration.GetValue<string>("AppSettings:logstashBufferBaseFileName"),
+                      batchFormatter: new Serilog.Sinks.Http.BatchFormatters.ArrayBatchFormatter())
                 .WriteTo.Console()
                 .EnrichMe()
                 .CreateLogger();
@@ -62,6 +58,7 @@ namespace FooApi
             .Enrich.WithProcessName()
             .Enrich.WithThreadId()
             .Enrich.WithThreadName()
-            .Enrich.WithMemoryUsage();
+            .Enrich.WithMemoryUsage()
+            .Enrich.WithProperty("Application", Configuration.GetValue<string>("Serilog:Properties:Application"));
     }
 }
